@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dr. K. Ilayaraja | Profile</title>
+  <meta name="description" content="Official profile page of Dr. K. Ilayaraja (M.B.B.S., D.PMR.). Healthcare, education, and community initiatives." />
+  <style>
+    :root{
+      --bg:#0b1220;
+      --card:#0f1a30;
+      --text:#eaf0ff;
+      --muted:#b9c4e2;
+      --line:rgba(255,255,255,0.12);
+      --accent:#7aa7ff;
+      --accent2:#64d2ff;
+      --btn:#162a55;
+      --btnHover:#1c356b;
+      --shadow: 0 20px 60px rgba(0,0,0,.35);
+      --radius:18px;
+      --max:980px;
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      background: radial-gradient(1200px 600px at 20% 0%, rgba(122,167,255,0.22), transparent 60%),
+                  radial-gradient(900px 500px at 90% 20%, rgba(100,210,255,0.16), transparent 55%),
+                  var(--bg);
+      color:var(--text);
+      line-height:1.55;
+    }
+
+    a{color:inherit; text-decoration:none}
+    .wrap{max-width:var(--max); margin:0 auto; padding:28px 18px 56px}
+    .topbar{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:12px; padding:10px 0 22px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px;
+      font-weight:700; letter-spacing:.2px;
+    }
+    .pill{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:8px 12px; border:1px solid var(--line);
+      border-radius:999px; color:var(--muted);
+      background: rgba(255,255,255,0.04);
+      backdrop-filter: blur(8px);
+      font-size:13px;
+    }
+
+    .hero{
+      display:grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap:18px;
+      align-items:stretch;
+    }
+
+    @media (max-width: 840px){
+      .hero{grid-template-columns:1fr}
+    }
+
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+
+    .heroMain{padding:26px 22px}
+    .name{
+      margin:0;
+      font-size:34px;
+      letter-spacing:.2px;
+      line-height:1.15;
+    }
+    .quals{
+      margin:10px 0 0;
+      color:var(--muted);
+      font-weight:600;
+    }
+    .title{
+      margin:10px 0 0;
+      color:var(--accent2);
+      font-weight:700;
+      font-size:14px;
+      letter-spacing:.25px;
+      text-transform: uppercase;
+    }
+
+    .ctaRow{
+      display:flex; flex-wrap:wrap; gap:10px;
+      margin-top:18px;
+    }
+
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      gap:10px;
+      padding:11px 14px;
+      border-radius:12px;
+      border:1px solid var(--line);
+      background: var(--btn);
+      transition: transform .12s ease, background .12s ease;
+      font-weight:700;
+      font-size:14px;
+      min-width: 140px;
+      cursor:pointer;
+    }
+    .btn:hover{background:var(--btnHover); transform: translateY(-1px)}
+    .btn.primary{
+      background: linear-gradient(90deg, rgba(122,167,255,0.9), rgba(100,210,255,0.85));
+      color:#081126;
+      border:none;
+    }
+    .btn.primary:hover{transform: translateY(-1px) scale(1.01)}
+    .btn.small{min-width:unset; padding:10px 12px; font-weight:800}
+
+    .photoCard{
+      display:flex; flex-direction:column;
+    }
+    .photoArea{
+      position:relative;
+      height: 320px;
+      background:
+        radial-gradient(500px 220px at 30% 25%, rgba(122,167,255,0.25), transparent 60%),
+        radial-gradient(420px 220px at 70% 40%, rgba(100,210,255,0.18), transparent 55%),
+        rgba(255,255,255,0.04);
+      border-bottom:1px solid var(--line);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:18px;
+    }
+    .avatar{
+      width: 200px;
+      height: 250px;
+      border-radius: 8px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.06);
+      display:flex; align-items:center; justify-content:center;
+      overflow:hidden;
+      box-shadow: 0 18px 40px rgba(0,0,0,.35);
+    }
+    .avatar img{
+      width:100%; height:100%; object-fit:cover;
+      display:block;
+    }
+    .avatarFallback{
+      color: var(--muted);
+      font-weight:700;
+      text-align:center;
+      padding:14px;
+      font-size:12px;
+    }
+
+    .photoMeta{padding:16px 18px}
+    .metaLine{
+      display:flex; gap:10px; flex-wrap:wrap;
+      color:var(--muted); font-size:13px;
+    }
+
+    .section{
+      margin-top:18px;
+      padding:22px;
+    }
+    .section h2{
+      margin:0 0 10px;
+      font-size:18px;
+      letter-spacing:.2px;
+    }
+    .section p{
+      margin:0;
+      color: var(--text);
+    }
+    .muted{color:var(--muted)}
+    .divider{height:1px; background:var(--line); margin:18px 0}
+
+    .grid3{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:12px;
+      margin-top:12px;
+    }
+    @media (max-width: 840px){
+      .grid3{grid-template-columns:1fr}
+    }
+    .mini{
+      padding: 16px;
+      border-radius: 16px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--line);
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .mini h3{
+      margin:0 0 6px;
+      font-size:16px;
+    }
+    .mini p{margin:0 0 12px; color:var(--muted); font-size:13px}
+    .mini .btn{width:100%}
+
+    .contactGrid{
+      display:grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap:12px;
+      margin-top:12px;
+    }
+    @media (max-width: 840px){
+      .contactGrid{grid-template-columns:1fr}
+    }
+    .contactItem{
+      padding:14px 16px;
+      border-radius:16px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,0.04);
+      color: var(--muted);
+      font-size:14px;
+    }
+    .contactButtons{
+      display:flex; flex-wrap:wrap; gap:10px;
+      align-items:flex-start;
+    }
+    .footer{
+      margin-top:20px;
+      color: rgba(185,196,226,.75);
+      font-size:12px;
+      text-align:center;
+    }
+h1 {
+  font-size: 42px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #7aa7ff;
+  margin-top: 30px;
+  margin-bottom: 12px;
+  position: relative;
+}
+
+h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #7aa7ff;
+  margin-top: 6px;
+  border-radius: 2px;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+
+h4 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #64d2ff;
+  margin-bottom: 4px;
+}
+
+h5 {
+  font-size: 14px;
+  font-weight: 500;
+  color: #64d2ff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.contactButtons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <div class="topbar">
+      <div class="brand">
+        <span class="pill">Profile & Vision</span>
+      </div>
+      <div class="pill" id="today"></div>
+    </div>
+
+    <div class="hero">
+      <div class="card heroMain">
+        <h1 class="name">Dr. K. Ilayaraja</h1>
+        <div class="quals">MBBS, DPMR</div>
+        <div class="title">Physician | Rural Health Systems Builder |<br> Social Impact Leader</div>
+
+        <div class="ctaRow">
+          <a class="btn primary" href="tel:+917604990439" aria-label="Call">Call</a>
+          <a class="btn primary" href="https://wa.me/917604990439?text=Hello%20Dr.%20Ilayaraja." target="_blank" rel="noopener" aria-label="WhatsApp">WhatsApp</a>
+          <a class="btn primary" href="mailto:drkilayaraja@yahoo.com" aria-label="Email">Email</a>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="muted" style="font-weight:700; margin-bottom:8px;">Quick Links</div>
+        <div class="ctaRow">
+          <a class="btn small" href="https://www.rajeswarihospitals.in/" target="_blank" rel="noopener">Hospital</a>
+          <a class="btn small" href="https://ilayarajaglobal.nirals.in/" target="_blank" rel="noopener">School</a>
+          <a class="btn small" href="https://drilayarajatrust.in/" target="_blank" rel="noopener">Trust</a>
+        </div>
+      </div>
+
+      <div class="card photoCard">
+        <div class="photoArea">
+          <div class="avatar">
+            <img src="doctor.jpg" alt="Dr. K. Ilayaraja">
+          </div>
+        </div>
+        <div class="photoMeta">
+          
+          <div style="margin-top:10px; color: var(--muted); font-size:13px;">
+            Healthcare without boundaries. Education without barriers.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card section" style="margin-top:18px;">
+      <h2>About Me</h2>
+      <p style="margin-top:12px;">
+        I am a medical professional dedicated to ensuring 24×7 accessible healthcare for underserved rural communities,
+        including a geographically isolated island region bordering Sri Lanka. My work focuses on bridging the gap between
+        urban medical infrastructure and remote populations by mobilising expert healthcare professionals to areas where
+        access is limited.
+      </p>
+      <p style="margin-top:12px;">
+        Beyond healthcare, I am equally committed to inclusive education. I established the <strong>Intensive Educational Care Unit (IE CARE)</strong>
+        framework to support slow learners in mastering foundational concepts through structured, focused academic intervention.
+        Through our institution, we ensure that students from fishing and farming communities receive education on par with urban
+        standards, creating equal opportunities for long-term growth.
+      </p>
+      <p style="margin-top:12px;"> 
+        In 2018, I founded the Dr. Ilayaraja Education and Health Services Trust with the belief that 
+        education and healthcare are fundamental rights. The trust works to support underserved communities through initiatives that
+        improve learning opportunities and expand access to healthcare services. With the support of partners and dedicated volunteers, 
+        our programs continue to positively impact individuals and strengthen communities.The trust is inspired by the <strong>
+        PURA (Providing Urban Amenities in Rural Areas)</strong> model envisioned by <strong>Dr. A.P.J. Abdul Kalam.</strong>
+        which focuses on transforming rural regions through improved infrastructure, services, and sustainable development.
+      </p>
+      <p class="muted" style="margin-top:12px; font-weight:700;">
+        My work remains guided by three core principles: Accessibility, Equity and Sustainable Community Development.
+      </p>
+    </div>
+    <div class="card section" style="margin-top:18px;">
+      <h2>Vision</h2>
+      <p style="margin-top:12px;">
+        To transform rural regions by developing urban-level infrastructure and services, creating economic opportunities, 
+        attracting new talent, and fostering a prosperous and vibrant rural society.</p>
+      </p>
+    </div>
+    <div class="card section" style="margin-top:18px;">
+      <h2>Mission</h2>
+      <p style="margin-top:12px;"> 
+        To collaborate with government and non-government organizations to build self-sustaining rural communities where 
+        people can thrive. Our focus is on expanding access to quality education and comprehensive healthcare services in rural areas, 
+        ensuring long-term social and economic upliftment.
+      </p>
+    </div>
+    <div class="card section">
+      <h2>Institutions</h2>
+      <div class="grid3">
+        <div class="mini">
+          <h3>Hospital</h3>
+          <h4>Rajeswari Multi-Speciality Hospitals</h4>
+            <p>A 24/7 advanced care facility delivering multidisciplinary healthcare services in a previously underserved coastal region.</p>
+          <a class="btn" href="https://www.rajeswarihospitals.in/" target="_blank" rel="noopener">Visit Hospital Website</a>
+        </div>
+
+        <div class="mini">
+          <h3>Educational Institution</h3>
+          <h4>Dr.Ilayaraja Global Academy &nbsp;&nbsp;&nbsp;</h4>
+          <p>An institution committed to inclusive, high-quality education with structured academic intervention programs.</p>
+          <a class="btn" href="https://ilayarajaglobal.nirals.in/" target="_blank" rel="noopener">Visit School Website</a>
+        </div>
+
+        <div class="mini">
+          <h3>Education & Health Services Trust</h3>
+          <h4>Dr. Ilayaraja Education and Health Services Trust</h4>
+          <p>A non-profit initiative focused on sustainable community welfare, preventive healthcare, and educational empowerment.</p>
+          <a class="btn" href="https://drilayarajatrust.in/" target="_blank" rel="noopener">Visit Trust Website</a>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <div class="footer">
+      © <span id="year"></span> Dr. K. Ilayaraja. All rights reserved.
+    </div>
+
+  </div>
+
+  <script>
+    const d = new Date();
+    document.getElementById("year").textContent = d.getFullYear();
+    document.getElementById("today").textContent =
+      d.toLocaleDateString(undefined, { weekday: "short", year: "numeric", month: "short", day: "numeric" });
+  </script>
+</body>
+</html>
