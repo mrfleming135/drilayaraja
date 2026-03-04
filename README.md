@@ -16,7 +16,7 @@ The organisation works to bridge the gap between urban resources and remote popu
 ### Healthcare Access
 Providing medical support and healthcare access to remote and underserved regions.
 
-### Intensive Educational Care Unit (IE CARE)
+### Schools
 A specialised learning framework designed to help slow learners build strong foundational academic skills.
 
 ### Community Development
